@@ -2,30 +2,24 @@
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.creareTable("Users", {
+    await queryInterface.createTable("Mobil", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      name: {
+      nama: {
         type: Sequelize.STRING,
       },
-      email: {
+      harga: {
         type: Sequelize.STRING,
       },
-      password: {
+      gambar: {
         type: Sequelize.STRING,
       },
-      roles: {
+      brand: {
         type: Sequelize.STRING,
-      },
-      access_token: {
-        type: Sequelize.TEXT,
-      },
-      refresh_token: {
-        type: Sequelize.TEXT,
       },
       createdAt: {
         allowNull: false,
@@ -39,6 +33,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Users");
+    await queryInterface.dropTable("Mobil");
   },
 };

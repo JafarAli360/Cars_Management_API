@@ -11,6 +11,20 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
      */
+    await queryInterface.bulkInsert(
+      "Superadmins",
+      [
+        {
+          name: "Ahmad Ja'far Ali",
+          email: "jafarali4646@gmail.com",
+          password: await bcrypt.hash("123456", 10), //setup with bcrypt encrypt
+          roles: "superadmin",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+      ],
+      {}
+    );
   },
 
   async down(queryInterface, Sequelize) {
