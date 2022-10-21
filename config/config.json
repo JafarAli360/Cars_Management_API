@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "",
-    "database": "db_openapi",
+    "database": "db_cars",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

@@ -1,5 +1,5 @@
 "use strict";
-
+const bcrypt = require("bcrypt");
 module.exports = {
   async up(queryInterface, Sequelize) {
     /**
@@ -12,7 +12,7 @@ module.exports = {
      * }], {});
      */
     await queryInterface.bulkInsert(
-      "Superadmins",
+      "users",
       [
         {
           name: "Ahmad Ja'far Ali",

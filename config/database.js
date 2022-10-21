@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize";
 
-const db = new Sequelize("db_openapi", "root", "", {
+const db = new Sequelize("db_cars", "root", "", {
   host: "127.0.0.1",
   dialect: "mysql",
 });

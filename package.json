@@ -6,7 +6,12 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "make-seed": "npx sequelize-cli seed:generate --name demo-user",
+    "model-users": "npx sequelize-cli model:generate --name Users --attributes name:string,email:string,password:string,roles:string,access_token:text,refresh_token:text",
+    "model-cars": "npx sequelize-cli model:generate --name Cars --attributes name:string,price:string,size:string,createdBy:string,updatedBy:string,deletedBy:string",
+    "seed": "npx sequelize-cli db:seed:all",
+    "migrate": "npx sequelize-cli db:migrate"
   },
   "repository": {
     "type": "git",
